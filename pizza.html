@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how to make the classic Margherita pizza at home with fresh mozzarella, tomatoes, and basil. Follow this simple recipe for a delicious homemade pizza experience.">
+    <meta name="keywords" content="Margherita pizza, pizza recipe, homemade pizza, classic pizza, cooking recipe, Italian pizza">
+    <meta name="author" content="Your Name">
+    <title>Classic Margherita Pizza - Recipe Blog</title>
+
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        body > h2 {
+            color: #ff4500;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #ff6347;
+            color: white;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+        }
+
+        .navbar .nav-links a {
+            margin-left: 20px;
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            transition: background 0.3s ease;
+            padding: 8px 15px;
+        }
+
+        .navbar .nav-links a:hover {
+            background-color: #ff4500;
+            border-radius: 5px;
+        }
+
+        /* Blog Post Hero Section */
+        .post-hero {
+            background-image: url('https://images.mrcook.app/recipe-image/01931f89-99bb-7e7f-86f9-483895ef3cbb');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px black;
+            padding: 50px 10%;
+        }
+
+        .post-hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .post-hero p {
+            font-size: 22px;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .post-hero .cta-btn {
+            background-color: #ffcc00;
+            color: #333;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .post-hero .cta-btn:hover {
+            background-color: #e6b800;
+        }
+
+        /* Recipe Content */
+        .post-content {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .post-content h2 {
+            font-size: 30px;
+            color: #ff6347;
+            margin-bottom: 15px;
+        }
+
+        .post-content h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .post-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .post-content ul {
+            margin-left: 20px;
+            list-style-type: disc;
+            font-size: 18px;
+        }
+
+        .post-content .ingredient-list {
+            margin-bottom: 30px;
+        }
+
+        .post-content .instruction-list {
+            margin-bottom: 40px;
+        }
+
+        /* Recipe Cards */
+        .recipe-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 50px 5%;
+        }
+
+        .recipe-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .recipe-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .recipe-card h3 {
+            font-size: 24px;
+            margin: 20px;
+        }
+
+        .recipe-card p {
+            margin: 0 20px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .recipe-card .read-more {
+            display: inline-block;
+            margin: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #ff6347;
+            transition: color 0.3s ease;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .recipe-card:hover .read-more {
+            color: #e6b800;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 30px 10%;
+        }
+
+        .footer p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .footer .social-links a {
+            margin: 0 10px;
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .footer .social-links a:hover {
+            color: #ff6347;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .post-hero h1 {
+                font-size: 40px;
+            }
+
+            .post-hero p {
+                font-size: 18px;
+            }
+
+            .post-content {
+                padding: 0 10px;
+            }
+
+            .post-content h2 {
+                font-size: 24px;
+            }
+
+            .post-content h3 {
+                font-size: 20px;
+            }
+
+            .recipe-cards {
+                padding: 30px 2%;
+            }
+
+            .recipe-card h3 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">Recipe Blog</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+        </div>
+    </div>
+
+    <!-- Blog Post Hero Section -->
+    <div class="post-hero">
+        <h1>Classic Margherita Pizza</h1>
+        <p>Learn how to make the classic Margherita pizza at home with fresh mozzarella, tomatoes, and basil. Follow this simple recipe for a delicious homemade pizza experience.</p>
+        <a href="#ingredients" class="cta-btn">Get the Recipe</a>
+    </div>
+
+    <!-- Recipe Content -->
+    <div class="post-content">
+        <h2 id="ingredients">Ingredients</h2>
+        <ul class="ingredient-list">
+            <li>1 pizza dough (store-bought or homemade)</li>
+            <li>200g fresh mozzarella cheese, sliced</li>
+            <li>2 large tomatoes, thinly sliced</li>
+            <li>Fresh basil leaves</li>
+            <li>1 tbsp olive oil</li>
+            <li>Salt and pepper to taste</li>
+            <li>Tomato sauce (optional)</li>
+        </ul>
+
+        <h2 id="instructions">Instructions</h2>
+        <ol class="instruction-list">
+            <li>Preheat your oven to 250°C (482°F).</li>
+            <li>Roll out the pizza dough on a floured surface to your desired thickness.</li>
+            <li>Transfer the dough onto a pizza stone or baking tray.</li>
+            <li>Spread a thin layer of tomato sauce (optional) over the dough.</li>
+            <li>Arrange the mozzarella slices evenly on the pizza.</li>
+            <li>Top with tomato slices, basil leaves, salt, and pepper.</li>
+            <li>Drizzle with olive oil.</li>
+            <li>Bake in the oven for 10-12 minutes until the crust is golden and the cheese is bubbly.</li>
+            <li>Remove from the oven and top with extra basil leaves for garnish.</li>
+            <li>Slice, serve, and enjoy your homemade Margherita pizza!</li>
+        </ol>
+    </div>
+
+    <!-- Recipe Cards Section -->
+     <h2>Related Recipes</h2>
+    <div class="recipe-cards">
+        <!-- Recipe Card 1 -->
+        <div class="recipe-card">
+            <img src="https://assets.unileversolutions.com/recipes-v2/109396.jpg" alt="Recipe 2">
+            <h3>Spaghetti Carbonara</h3>
+            <p>Classic Italian pasta with eggs, cheese, pancetta, and pepper.</p>
+            <a href="carbonara.html" class="read-more">Read More</a>
+        </div>
+        
+        <!-- Recipe Card 2 -->
+        <div class="recipe-card">
+            <img src="https://weekendatthecottage.com/wp-content/uploads/2022/09/EverydaySalad5-scaled.jpeg" alt="Recipe 3">
+            <h3>Healthy Green Salad</h3>
+            <p>Fresh vegetables mixed with a tangy lemon dressing.</p>
+            <a href="salad.html" class="read-more">Read More</a>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 Recipe Blog | All Rights Reserved</p>
+        <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Pinterest</a>
+            <a href="#">Twitter</a>
+        </div>
+    </div>
+
+</body>
+</html>
